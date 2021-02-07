@@ -1,0 +1,40 @@
+.spinner-border {
+  width: 7rem;
+  height: 7rem;
+  margin-top: 150px;
+}
+
+.card {
+  cursor: pointer;
+}
+
+input[type="search"] {
+  border-radius: 50px;
+  outline: none;
+  padding: 15px 15px;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.fas.fa-check-square, .navbar-light .navbar-brand {
+  color: #39AC31;
+}
+
+.relative-position {
+  position: relative;
+}
+
+.search-btn {
+  position: absolute;
+  right: 0;
+  padding: 15px 10px;
+  background: white;
+  border-radius: 50px;
+  width: 130px;
+}
+.navbar-brand img {
+  width: 120px;
+}
