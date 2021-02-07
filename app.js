@@ -5,7 +5,7 @@ const displayItems = items => {
     const mealDiv = document.createElement('div');
     mealDiv.className = 'col-md-3 my-2';
     mealDiv.innerHTML = `
-            <div class="card shadow mb-5 bg-white custom-rounded" data-bs-toggle="modal" data-bs-target="#itemInfo-${item.strMeal}">
+            <div class="card shadow mb-5 bg-white custom-rounded" data-bs-toggle="modal" data-bs-target="#itemInfo-${item.idMeal}">
                 <img class="card-img-top" src= "${item.strMealThumb}">
                      <div class="card-body">
                     <h5 class="text-center meal-name">${item.strMeal}</h5>
@@ -21,11 +21,12 @@ const displayItems = items => {
 }
 
 const showModal = (item) => {
-  return `<div class="modal fade" id="itemInfo-${item.strMeal}" tabindex="-1" aria-labelledby="itemInfo-${item.strMeal}Label" aria-hidden="true">
+  console.log(item);
+  return `<div class="modal fade" id="itemInfo-${item.idMeal}" tabindex="-1" aria-labelledby="itemInfo-${item.idMeal}Label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title text-center" id="itemInfo-${item.strMeal}Label">${item.strMeal}</h2>
+          <h2 class="modal-title text-center" id="itemInfo-${item.idMeal}Label">${item.strMeal}</h2>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -63,7 +64,7 @@ const searchItem = async () => {
     showErrorMessage('The item you are looking for does not exists!! Please try again!');
   }
 }
-searchItem();
+// searchItem();
 
 // show error message
 const showErrorMessage = (message) => {
