@@ -32,16 +32,17 @@ const showModal = (item) => {
         <div class="modal-body">
           <img src=${item.strMealThumb} class="img-fluid img-thumbnail my-4">
           <h4 class="text-center mx-3 text-primary">Ingredients List</h4>
-          <div><i class="fas fa-check-square"></i> ${item.strIngredient1 || '-'}</div>
-          <div><i class="fas fa-check-square"></i> ${item.strIngredient2 || '-'}</div>
-          <div><i class="fas fa-check-square"></i> ${item.strIngredient3 || '-'}</div>
-          <div><i class="fas fa-check-square"></i> ${item.strIngredient4 || '-'}</div>
-          <div><i class="fas fa-check-square"></i> ${item.strIngredient5 || '-'}</div>
-          <div><i class="fas fa-check-square"></i> ${item.strIngredient6 || '-'}</div>
-          <div><i class="fas fa-check-square"></i> ${item.strIngredient7 || '-'}</div>
-          <div><i class="fas fa-check-square"></i> ${item.strIngredient8 || '-'}</div>
-          <div><i class="fas fa-check-square"></i> ${item.strIngredient9 || '-'}</div>
-          <div><i class="fas fa-check-square"></i> ${item.strIngredient10 || '-'}</div>
+           ${item.strIngredient1 ? `<div><i class="fas fa-check-square"></i>${item.strIngredient1}</div>` : ''}
+           ${item.strIngredient2 ? `<div><i class="fas fa-check-square"></i>${item.strIngredient2}</div>` : ''}
+           ${item.strIngredient3 ? `<div><i class="fas fa-check-square"></i>${item.strIngredient3}</div>` : ''}
+           ${item.strIngredient4 ? `<div><i class="fas fa-check-square"></i>${item.strIngredient4}</div>` : ''}
+           ${item.strIngredient5 ? `<div><i class="fas fa-check-square"></i>${item.strIngredient5}</div>` : ''}
+           ${item.strIngredient6 ? `<div><i class="fas fa-check-square"></i>${item.strIngredient6}</div>` : ''}
+           ${item.strIngredient7 ? `<div><i class="fas fa-check-square"></i>${item.strIngredient7}</div>` : ''}
+           ${item.strIngredient8 ? `<div><i class="fas fa-check-square"></i>${item.strIngredient8}</div>` : ''}
+           ${item.strIngredient9 ? `<div><i class="fas fa-check-square"></i>${item.strIngredient9}</div>` : ''}
+           ${item.strIngredient10 ? `<div><i class="fas fa-check-square"></i>${item.strIngredient10}</div>` : ''}
+          
           <h3 class="text-center text-primary">Instructions</h3>
           <div> ${item.strInstructions}</div>
         </div>
